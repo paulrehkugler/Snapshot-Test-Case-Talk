@@ -15,6 +15,7 @@
 		DA3999551CB9899100B8376B /* ViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3999541CB9899100B8376B /* ViewControllerSnapshotTests.swift */; };
 		DA3999571CB98CA200B8376B /* UIViewController+DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3999561CB98CA200B8376B /* UIViewController+DeviceOrientation.swift */; };
 		DA3999591CB98CE100B8376B /* DeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3999581CB98CE100B8376B /* DeviceOrientation.swift */; };
+		DA39995A1CB99E5800B8376B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3999341CB9818B00B8376B /* ViewController.swift */; };
 		F47E6AA7AD1908BAF4873E73 /* Pods_Snapshot_Test_Case_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB55D623A80A104C35A8581 /* Pods_Snapshot_Test_Case_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -341,6 +342,7 @@
 			files = (
 				DA3999591CB98CE100B8376B /* DeviceOrientation.swift in Sources */,
 				DA3999551CB9899100B8376B /* ViewControllerSnapshotTests.swift in Sources */,
+				DA39995A1CB99E5800B8376B /* ViewController.swift in Sources */,
 				DA3999571CB98CA200B8376B /* UIViewController+DeviceOrientation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

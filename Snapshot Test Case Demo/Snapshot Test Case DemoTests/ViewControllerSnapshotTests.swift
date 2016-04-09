@@ -25,7 +25,7 @@ final class ViewControllerSnapshotTests: FBSnapshotTestCase {
             viewController = UIViewController()
             viewController.view.frame = UIScreen.mainScreen().bounds
 
-            let testingViewController = UIViewController()
+            let testingViewController = ViewController()
             viewController.setup(viewControllerForTesting: testingViewController, inDeviceOrientation: deviceOrientation)
             FBSnapshotVerifyView(testingViewController.view, identifier: deviceOrientation.name)
         }
