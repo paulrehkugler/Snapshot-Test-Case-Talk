@@ -1,0 +1,26 @@
+Rapid View Prototyping Using FBSnapshotTestCase
+
+——
+
+Define terms:
+	- What is rapid view prototyping?
+	- What is FBSnapshotTestCase?
+
+Quick overview of FBSnapshotTestCase so that this talk is useful to people who are unfamiliar
+
+How to write tests for rapid view prototyping:
+	- DeviceOrientation class
+	- UIViewController helper extension
+	- example test
+
+Demo
+
+But my ViewController isn’t testable like that one!
+	- dependency injection for data
+	- maybe your view controller is too complex and you should just break your view controller’s layout code into a custom UIView
+
+Why is this better than IB assistant pane?
+	- at the end of writing this, you have working unit tests
+	- works with and without IB, so you can appease people that like to write layout in code
+
+Questions?
