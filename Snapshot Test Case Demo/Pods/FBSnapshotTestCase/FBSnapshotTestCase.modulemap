@@ -1,0 +1,15 @@
+framework module FBSnapshotTestCase {
+  umbrella header "FBSnapshotTestCase.h"
+
+  export *
+  module * { export * }
+
+  header "FBSnapshotTestCase.h"
+  header "FBSnapshotTestCasePlatform.h"
+  header "FBSnapshotTestController.h"
+
+  header "UIImage+Compare.h"
+  header "UIImage+Diff.h"
+  header "UIImage+Snapshot.h"
+}
+
