@@ -34,7 +34,8 @@
 - Run with `recordMode = false` to compare against snapshots.
 
 ^ This is how I set up the demo. Your mileage may vary.
-^ Now that you have some background as to the scope, we're going to talk about
+
+^ Now that you have some background as to the scope, we're going to talk about actually prototyping using FBSnapshotTestCase
 
 ---
 
@@ -87,18 +88,26 @@ static func iPhone4Portrait() -> DeviceOrientation {
 static func allDeviceOrientations() -> [DeviceOrientation] { ... }
 ```
 
+^ individual convenience functions for all current iOS devices
+
+^ allDeviceOrientations convenience function to easily iterate over all devices
+
 ---
 
 # Using DeviceOrientation
 
 - `UIViewController` extension can set up `UIViewController` containment
 - `setOverrideTraitCollection(collection:, forChildViewController:)`
-- set `frame` of the `childViewController` to the `deviceOrientation`'s `screenSize`.
+- set `frame` of the `childViewController`'s `view` to the `deviceOrientation`'s `screenSize`.
 
 ```swift
 extension UIViewController {
     func setup(viewControllerForTesting viewController: UIViewController, inDeviceOrientation deviceOrientation: DeviceOrientation) { ... }
 ```
+
+^ override trait collection to simulate size classes
+
+^ set frame of the child view controller's view to get a real-world layout based on those size classes
 
 ---
 
@@ -125,6 +134,14 @@ func testViewControllerAppearance() {
 }
 ```
 
+^ set up a parent view controller for containment. can be a vanilla UIViewController because of the extension we wrote
+
+^ child view controller is of type ViewController
+
+^ call setup() extension
+
+^ let FBSnapshotVerifyView take a snapshot
+
 ---
 
 # Demo
@@ -136,6 +153,10 @@ func testViewControllerAppearance() {
 - Use dependency injection for sources of data, instead of firing off network requests from within your view controllers.
 - Separate layout from logic by making a custom `UIView` subclass and rapidly iterating on that instead.
 
+^ view controllers sometimes have lots of different states. think about how you can compose things that change those states into your view controllers. what sets it to loading? what sets the data in your view controller?
+
+^ if it's not possible to inject different behavior so that you can get consistent snapshots in your view controller, make a custom `UIView` subclass to handle layout, and mutate properties on that instead
+
 ---
 
 # Why?
@@ -143,4 +164,23 @@ func testViewControllerAppearance() {
 - At the end of this, you have working unit tests
 - Works with and without Interface Builder, so you can appease people that like to write layout in code
 
+^ working unit tests - people cannot modify shared ui components or shared constants and mess up your code. if you write these across your app, you can easily see what breaks across iOS SDK upgrades
+
+^ works with interface builder, even things that aren't IBDesignable, so that you can see what these look like in the real world
+
 ---
+
+# Feedback on Adding FBSnapshotTestCase at Tumblr
+
+![inline](./images/Divine-Law-before-Moses.png)![inline](./images/american-hero.png)
+
+^ your coworkers will love you
+
+---
+
+# Learn More
+
+- Source Code on GitHub: [https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/](https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/)
+
+- [@paulrehkugler](http://twitter.com/paulrehkugler)
+- [cocoa.tumblr.com](https://cocoa.tumblr.com)
