@@ -34,6 +34,7 @@ final class ViewController: UIViewController {
 
         // 4
         static let buttonMargins: CGFloat = 8
+        static let buttonFont = UIFont(name: "Futura", size: 18)
     }
 
     // MARK: - UIViewController
@@ -59,6 +60,7 @@ final class ViewController: UIViewController {
         button.backgroundColor = Constants.buttonBackgroundColor
         button.layer.cornerRadius = Constants.buttonCornerRadius
         button.tintColor = Constants.buttonTintColor
+        button.titleLabel?.font = Constants.buttonFont
 
         button.translatesAutoresizingMaskIntoConstraints = false
 
