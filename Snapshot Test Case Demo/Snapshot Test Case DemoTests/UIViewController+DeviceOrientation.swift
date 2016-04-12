@@ -9,7 +9,10 @@
 import UIKit
 
 extension UIViewController {
-    func setup(viewControllerForTesting viewController: UIViewController, inDeviceOrientation deviceOrientation: DeviceOrientation) {
+    func setup(
+        viewControllerForTesting viewController: UIViewController,
+        inDeviceOrientation deviceOrientation: DeviceOrientation)
+    {
         let overrideTraitCollection = UITraitCollection(traitsFromCollections: [
             UITraitCollection(horizontalSizeClass: deviceOrientation.horizontalSizeClass),
             UITraitCollection(verticalSizeClass: deviceOrientation.verticalSizeClass)

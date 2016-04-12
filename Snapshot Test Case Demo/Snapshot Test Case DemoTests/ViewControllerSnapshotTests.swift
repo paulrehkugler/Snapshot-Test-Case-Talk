@@ -20,7 +20,6 @@ final class ViewControllerSnapshotTests: FBSnapshotTestCase {
     }
 
     func testViewControllerAppearance() {
-
         DeviceOrientation.allDeviceOrientations().forEach { deviceOrientation in
             viewController = UIViewController()
             viewController.view.frame = UIScreen.mainScreen().bounds
