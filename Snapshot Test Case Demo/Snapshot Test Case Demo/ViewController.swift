@@ -23,15 +23,17 @@ final class ViewController: UIViewController {
         static let buttonTintColor = UIColor.whiteColor()
         static let buttonTitle = NSLocalizedString(
             "world",
-            comment: "The second word in \"Hello world\". Please don't do translations like this.")
+            comment: "The second word in \"Hello world\". Don't do translations like this.")
 
         // 3
         static let labelTextColor = UIColor.whiteColor()
         static let labelFont = UIFont(name: "Futura-MediumItalic", size: 22)
         static let labelTitle = NSLocalizedString(
             "Hello",
-            comment: "The second word in \"Hello world\". Please don't do translations like this.")
+            comment: "The second word in \"Hello world\". Don't do translations like this.")
 
+        // 4
+        static let buttonMargins: CGFloat = 8
     }
 
     // MARK: - UIViewController
@@ -133,8 +135,8 @@ final class ViewController: UIViewController {
         // 4 - Size class specific layout - https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/pull/3
 
         NSLayoutConstraint.activateConstraints([
-            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
-            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
+            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor, constant: Constants.buttonMargins),
+            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor, constant: -Constants.buttonMargins),
             button.bottomAnchor.constraintEqualToAnchor(containerView.bottomAnchor),
 
             button.topAnchor.constraintEqualToAnchor(label.bottomAnchor),
