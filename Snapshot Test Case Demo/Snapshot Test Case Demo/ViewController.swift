@@ -26,11 +26,11 @@ final class ViewController: UIViewController {
             comment: "The second word in \"Hello world\". Please don't do translations like this.")
 
         // 3
-//        static let labelTextColor = UIColor.whiteColor()
-//        static let labelFont = UIFont(name: "Futura-MediumItalic", size: 22)
-//        static let labelTitle = NSLocalizedString(
-//            "Hello",
-//            comment: "The second word in \"Hello world\". Please don't do translations like this.")
+        static let labelTextColor = UIColor.whiteColor()
+        static let labelFont = UIFont(name: "Futura-MediumItalic", size: 22)
+        static let labelTitle = NSLocalizedString(
+            "Hello",
+            comment: "The second word in \"Hello world\". Please don't do translations like this.")
 
     }
 
@@ -43,7 +43,7 @@ final class ViewController: UIViewController {
 
         view.backgroundColor = Constants.backgroundColor
 
-        // 2 - Add a button
+        // 2 - Add a button - https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/pull/1
 
         let containerView = UIView()
         containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -64,18 +64,18 @@ final class ViewController: UIViewController {
 
         self.button = button
 
-        // 3 - Stack label above button
+        // 3 - Stack label above button - https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/pull/2
 
-//        let label = UILabel()
-//        label.textColor = Constants.labelTextColor
-//        label.text = Constants.labelTitle
-//        label.textAlignment = .Center
-//        label.font = Constants.labelFont
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//
-//        containerView.addSubview(label)
-//
-//        self.label = label
+        let label = UILabel()
+        label.textColor = Constants.labelTextColor
+        label.text = Constants.labelTitle
+        label.textAlignment = .Center
+        label.font = Constants.labelFont
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        containerView.addSubview(label)
+
+        self.label = label
 
         updateViewConstraints()
     }
@@ -92,43 +92,43 @@ final class ViewController: UIViewController {
         }
 
         // TODO: comment me out after #2
-        NSLayoutConstraint.activateConstraints([
-            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
-            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
-            button.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
-            button.bottomAnchor.constraintEqualToAnchor(containerView.bottomAnchor),
-
-            containerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
-            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
-            containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
-            ])
-
-        // 3
-
-//        guard let label = label else {
-//            fatalError("It's expected that the view has loaded before updateViewConstraints() is called.")
-//        }
-//
-//        // TODO: comment me out after #3
 //        NSLayoutConstraint.activateConstraints([
 //            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
 //            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
+//            button.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
 //            button.bottomAnchor.constraintEqualToAnchor(containerView.bottomAnchor),
-//
-//            button.topAnchor.constraintEqualToAnchor(label.bottomAnchor),
-//            button.heightAnchor.constraintEqualToAnchor(label.heightAnchor),
-//
-//            label.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
-//            label.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
-//            label.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
-//            label.centerXAnchor.constraintEqualToAnchor(containerView.centerXAnchor),
 //
 //            containerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
 //            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
 //            containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
 //            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
 //            ])
+
+        // 3
+
+        guard let label = label else {
+            fatalError("It's expected that the view has loaded before updateViewConstraints() is called.")
+        }
+
+        // TODO: comment me out after #3
+        NSLayoutConstraint.activateConstraints([
+            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
+            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
+            button.bottomAnchor.constraintEqualToAnchor(containerView.bottomAnchor),
+
+            button.topAnchor.constraintEqualToAnchor(label.bottomAnchor),
+            button.heightAnchor.constraintEqualToAnchor(label.heightAnchor),
+
+            label.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
+            label.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
+            label.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
+            label.centerXAnchor.constraintEqualToAnchor(containerView.centerXAnchor),
+
+            containerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
+            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
+            containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
+            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
+            ])
 
         // 4
 
