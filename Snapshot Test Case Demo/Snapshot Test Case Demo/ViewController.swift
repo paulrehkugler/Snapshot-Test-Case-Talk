@@ -24,6 +24,7 @@ final class ViewController: UIViewController {
 //        static let buttonTitle = NSLocalizedString(
 //            "world",
 //            comment: "The second word in \"Hello world\". Don't do translations like this.")
+//        static let buttonFont = UIFont(name: "Futura", size: 18)
 
         // 3
 //        static let labelTextColor = UIColor.whiteColor()
@@ -34,7 +35,6 @@ final class ViewController: UIViewController {
 
         // 4
 //        static let buttonMargins: CGFloat = 8
-//        static let buttonFont = UIFont(name: "Futura", size: 18)
     }
 
     // MARK: - UIViewController
