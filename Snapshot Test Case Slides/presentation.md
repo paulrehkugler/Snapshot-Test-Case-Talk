@@ -24,6 +24,8 @@
 - You provide a directory path, and tell it to test a view.
 - It generates snapshots and diffs the snapshots. If there is no difference, the test passes.
 
+^ testing library that allows you to unit test the appearance of views.
+
 ---
 
 # Setting up FBSnapshotTestCase
@@ -48,12 +50,16 @@
 - Get nearly immediate feedback during development.
 - Test across all devices.
 
+^ get nearly immediate feedback during development and test across all known iOS devices.
+
 ---
 
 # Nearly Immediate feedback
 
 - Run the tests often during development.
 - Keep them in `recordMode` throughout development.
+
+^ it's on you! run the tests frequently during development and keep them in recordMode to generate snapshots frequently.
 
 ---
 
@@ -70,7 +76,11 @@ struct DeviceOrientation {
 }
 ```
 
-^ encapsulates all differences that will affect layout across all devices
+^ i built this device orientation helper struct to encapsulates all differences that will affect layout across all devices
+
+^ horizontal size class, vertical size class, screen size
+
+^ name is an identifier that makes the filenames easier to read
 
 ---
 
@@ -104,6 +114,7 @@ static func allDeviceOrientations() -> [DeviceOrientation] { ... }
 extension UIViewController {
     func setup(viewControllerForTesting viewController: UIViewController, inDeviceOrientation deviceOrientation: DeviceOrientation) { ... }
 ```
+^ UIViewController containment extension
 
 ^ override trait collection to simulate size classes
 
