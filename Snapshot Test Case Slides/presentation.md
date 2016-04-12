@@ -58,14 +58,14 @@
 
 # Test Across All devices
 
-- `DeviceOrientation` helper class.
+- `DeviceOrientation` helper struct.
 
 ```swift
 struct DeviceOrientation {
-    let horizontalSizeClass: UIUserInterfaceSizeClass
-    let verticalSizeClass: UIUserInterfaceSizeClass
-    let screenSize: CGSize
-    let name: String
+  let horizontalSizeClass: UIUserInterfaceSizeClass
+  let verticalSizeClass: UIUserInterfaceSizeClass
+  let screenSize: CGSize
+  let name: String
 }
 ```
 
@@ -144,5 +144,3 @@ func testViewControllerAppearance() {
 - Works with and without Interface Builder, so you can appease people that like to write layout in code
 
 ---
-
-# Questions?
