@@ -111,27 +111,6 @@ final class ViewController: UIViewController {
         }
 
         // TODO: comment me out after #3
-        NSLayoutConstraint.activateConstraints([
-            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
-            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
-            button.bottomAnchor.constraintEqualToAnchor(containerView.bottomAnchor),
-
-            button.topAnchor.constraintEqualToAnchor(label.bottomAnchor),
-            button.heightAnchor.constraintEqualToAnchor(label.heightAnchor),
-
-            label.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
-            label.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
-            label.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
-            label.centerXAnchor.constraintEqualToAnchor(containerView.centerXAnchor),
-
-            containerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
-            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
-            containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
-            ])
-
-        // 4
-
 //        NSLayoutConstraint.activateConstraints([
 //            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
 //            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
@@ -143,24 +122,45 @@ final class ViewController: UIViewController {
 //            label.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
 //            label.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
 //            label.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
+//            label.centerXAnchor.constraintEqualToAnchor(containerView.centerXAnchor),
 //
 //            containerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
-//            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor)
+//            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
+//            containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
+//            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
 //            ])
-//
-//        switch traitCollection.horizontalSizeClass {
-//        case .Regular:
-//            NSLayoutConstraint.activateConstraints([
-//                containerView.widthAnchor.constraintEqualToAnchor(view.widthAnchor, multiplier: 0.5, constant: 0)
-//                ])
-//
-//        case .Compact, .Unspecified:
-//            NSLayoutConstraint.activateConstraints([
-//                containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-//                containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
-//                ])
-//
-//        }
+
+        // 4 - Size class specific layout
+
+        NSLayoutConstraint.activateConstraints([
+            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
+            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
+            button.bottomAnchor.constraintEqualToAnchor(containerView.bottomAnchor),
+
+            button.topAnchor.constraintEqualToAnchor(label.bottomAnchor),
+            button.heightAnchor.constraintEqualToAnchor(label.heightAnchor),
+
+            label.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
+            label.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
+            label.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
+
+            containerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
+            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor)
+            ])
+
+        switch traitCollection.horizontalSizeClass {
+        case .Regular:
+            NSLayoutConstraint.activateConstraints([
+                containerView.widthAnchor.constraintEqualToAnchor(view.widthAnchor, multiplier: 0.5, constant: 0)
+                ])
+
+        case .Compact, .Unspecified:
+            NSLayoutConstraint.activateConstraints([
+                containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
+                containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
+                ])
+
+        }
     }
 }
 
