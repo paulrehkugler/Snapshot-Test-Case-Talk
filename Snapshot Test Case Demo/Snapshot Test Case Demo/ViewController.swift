@@ -18,12 +18,12 @@ final class ViewController: UIViewController {
         static let backgroundColor = UIColor(red: 54 / 255, green: 70 / 255, blue: 93 / 255, alpha: 1)
 
         // 2
-//        static let buttonBackgroundColor = UIColor(red: 82 / 255, green: 158 / 255, blue: 204 / 255, alpha: 1)
-//        static let buttonCornerRadius: CGFloat = 3
-//        static let buttonTintColor = UIColor.whiteColor()
-//        static let buttonTitle = NSLocalizedString(
-//            "world",
-//            comment: "The second word in \"Hello world\". Please don't do translations like this.")
+        static let buttonBackgroundColor = UIColor(red: 82 / 255, green: 158 / 255, blue: 204 / 255, alpha: 1)
+        static let buttonCornerRadius: CGFloat = 3
+        static let buttonTintColor = UIColor.whiteColor()
+        static let buttonTitle = NSLocalizedString(
+            "world",
+            comment: "The second word in \"Hello world\". Please don't do translations like this.")
 
         // 3
 //        static let labelTextColor = UIColor.whiteColor()
@@ -45,24 +45,24 @@ final class ViewController: UIViewController {
 
         // 2 - Add a button
 
-//        let containerView = UIView()
-//        containerView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        view.addSubview(containerView)
-//
-//        self.containerView = containerView
-//
-//        let button = UIButton(type: .System)
-//        button.setTitle(Constants.buttonTitle, forState: .Normal)
-//        button.backgroundColor = Constants.buttonBackgroundColor
-//        button.layer.cornerRadius = Constants.buttonCornerRadius
-//        button.tintColor = Constants.buttonTintColor
-//
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//
-//        containerView.addSubview(button)
-//
-//        self.button = button
+        let containerView = UIView()
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(containerView)
+
+        self.containerView = containerView
+
+        let button = UIButton(type: .System)
+        button.setTitle(Constants.buttonTitle, forState: .Normal)
+        button.backgroundColor = Constants.buttonBackgroundColor
+        button.layer.cornerRadius = Constants.buttonCornerRadius
+        button.tintColor = Constants.buttonTintColor
+
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        containerView.addSubview(button)
+
+        self.button = button
 
         // 3 - Stack label above button
 
@@ -87,22 +87,22 @@ final class ViewController: UIViewController {
 
         // 2
 
-//        guard let button = button, containerView = containerView else {
-//            fatalError("It's expected that the view has loaded before updateViewConstraints() is called.")
-//        }
-//
-//        // TODO: comment me out after #2
-//        NSLayoutConstraint.activateConstraints([
-//            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
-//            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
-//            button.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
-//            button.bottomAnchor.constraintEqualToAnchor(containerView.bottomAnchor),
-//
-//            containerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
-//            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
-//            containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-//            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
-//            ])
+        guard let button = button, containerView = containerView else {
+            fatalError("It's expected that the view has loaded before updateViewConstraints() is called.")
+        }
+
+        // TODO: comment me out after #2
+        NSLayoutConstraint.activateConstraints([
+            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
+            button.trailingAnchor.constraintEqualToAnchor(containerView.trailingAnchor),
+            button.topAnchor.constraintEqualToAnchor(containerView.topAnchor),
+            button.bottomAnchor.constraintEqualToAnchor(containerView.bottomAnchor),
+
+            containerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
+            containerView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
+            containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
+            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
+            ])
 
         // 3
 
