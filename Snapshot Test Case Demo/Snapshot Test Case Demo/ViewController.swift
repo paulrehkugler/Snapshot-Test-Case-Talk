@@ -43,7 +43,7 @@ final class ViewController: UIViewController {
 
         view.backgroundColor = Constants.backgroundColor
 
-        // 2 - Add a button
+        // 2 - Add a button - https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/pull/1
 
 //        let containerView = UIView()
 //        containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -64,7 +64,7 @@ final class ViewController: UIViewController {
 //
 //        self.button = button
 
-        // 3 - Stack label above button
+        // 3 - Stack label above button - https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/pull/2
 
 //        let label = UILabel()
 //        label.textColor = Constants.labelTextColor
@@ -130,7 +130,7 @@ final class ViewController: UIViewController {
 //            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
 //            ])
 
-        // 4
+        // 4 - Size class specific layout - https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/pull/3
 
 //        NSLayoutConstraint.activateConstraints([
 //            button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
@@ -153,13 +153,13 @@ final class ViewController: UIViewController {
 //            NSLayoutConstraint.activateConstraints([
 //                containerView.widthAnchor.constraintEqualToAnchor(view.widthAnchor, multiplier: 0.5, constant: 0)
 //                ])
-//
+//            
 //        case .Compact, .Unspecified:
 //            NSLayoutConstraint.activateConstraints([
 //                containerView.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
 //                containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
 //                ])
-//
+//            
 //        }
     }
 }
