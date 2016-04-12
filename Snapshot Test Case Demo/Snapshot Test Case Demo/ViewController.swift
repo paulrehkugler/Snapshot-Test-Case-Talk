@@ -130,7 +130,7 @@ final class ViewController: UIViewController {
 //            containerView.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor)
 //            ])
 
-        // 4 - Size class specific layout
+        // 4 - Size class specific layout - https://github.com/paulrehkugler/Snapshot-Test-Case-Talk/pull/3
 
         NSLayoutConstraint.activateConstraints([
             button.leadingAnchor.constraintEqualToAnchor(containerView.leadingAnchor),
